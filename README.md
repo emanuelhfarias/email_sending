@@ -35,6 +35,8 @@ python manage.py createsuperuser
 exit
 ```
 
+Try to send an email and see the results on MailHog (`localhost:1025`)
+
 ### without docker
 ```
 git clone && cd ..
