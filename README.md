@@ -15,11 +15,6 @@ Simple django-admin dashboard to send asynchronous emails with Celery and Redis.
 * Redis (Message Broker)
 * MailHog (SMTP testing server)
 
-### Result
-<h1 align="center">
-  <img src=".github/result.png" width="800px" />
-</h1>
-
 ### Running
 
 #### Dependencies
@@ -31,7 +26,7 @@ Simple django-admin dashboard to send asynchronous emails with Celery and Redis.
 $ docker-compose run migration
 $ docker-compose up
 ```
-Open localhost:8000. It will open django-admin. You will need to create a superuser.
+Open `localhost:8000` in your browser. It will open django-admin. You will need to create a superuser.
 
 ```
 docker exec -it email_sending_web_1 bash
