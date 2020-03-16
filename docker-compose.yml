@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  broker:
+    image: redis
+    ports:
+      - '6379:6379'
+  web:
+    build: .
+    entrypoint: /code/entrypoint.sh
+    volumes:
+      - .:/code
+      - ./postgres:/data/postgres
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  celery:
+    build: .
+    command: celery -A core worker -l info
+    volumes:
+      - .:/code
+      - ./postgres:/data/postgres
+    depends_on:
+      - db
+      - broker
+  migration:
+    build: .
+    command: python manage.py migrate
+    volumes:
+      - .:/code
+      - ./postgres:/data/postgres
+    depends_on:
+      - db
