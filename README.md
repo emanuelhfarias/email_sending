@@ -1,3 +1,8 @@
+
+Requirements
+Docker
+docker-compose (pip install docker-compose)
+
 ```
 ./manage.py migrate
 ./manage.py createsuperuser
