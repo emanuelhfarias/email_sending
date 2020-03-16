@@ -1,25 +1,25 @@
 <h1 align="center">
-  <img src=".github/email.jpg" />
+  <img src=".github/email.jpg" width="150px" />
 </h1>
 
 <h3 align="center">
   :email: Asynchronous email sending with Celery
 </h3>
 
-## Descrição
+## Description
 Simple django-admin dashboard to send asynchronous emails with Celery and Redis.
 
-### Tecnologies
+### Technologies
 * Django
 * Celery
 * Redis
 
-### Resultado
+### Result
 <h1 align="center">
   <img src=".github/result.png" width="800px" />
 </h1>
 
-### Subindo a aplicação
+### Running
 
 Requirements
 Docker
