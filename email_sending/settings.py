@@ -123,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_BROKER_URL = 'redis://localhost'
+CELERY_BROKER_URL = 'redis://172.17.0.1' # redis://broker or redis://localhost
 
-EMAIL_HOST='localhost'
+EMAIL_HOST='172.17.0.1' # mail or localhost
 EMAIL_PORT=1025

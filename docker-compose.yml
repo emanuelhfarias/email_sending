@@ -36,3 +36,9 @@ services:
       - ./postgres:/data/postgres
     depends_on:
       - db
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
