@@ -9,6 +9,11 @@
 ## Description
 Simple django-admin dashboard to send asynchronous emails with Celery and Redis.
 
+### Result
+<h1 align="center">
+  <img src=".github/demo.gif" width="800px" />
+</h1>
+
 ### Technologies
 * Django
 * Celery
@@ -37,7 +42,7 @@ exit
 
 Try to send an email and see the results on MailHog (`localhost:1025`)
 
-### without docker
+### Running without docker
 ```
 git clone && cd ..
 docker run -it -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust postgres
