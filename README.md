@@ -28,7 +28,6 @@ Simple django-admin dashboard to send asynchronous emails with Celery and Redis.
 
 
 ```
-$ docker-compose run migration
 $ docker-compose up
 ```
 Open `localhost:8000` in your browser. It will open django-admin. You will need to create a superuser.
@@ -41,6 +40,8 @@ exit
 ```
 
 Try to send an email and see the results on MailHog (`localhost:1025`)
+
+If any problem happens during migrations, run: `docker-compose run migration`
 
 ### Running without docker
 ```
